@@ -24,14 +24,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-# class PostImage(models.Model):
-#     image = models.ImageField(upload_to='post_images/carousel')
-#     post = models.ForeignKey(
-#         to=Post,
-#         on_delete=models.CASCADE,
-#         related_name='post_images'
-    # )
-
 
 class PostImage(models.Model):
     image = models.ImageField(upload_to='posts', blank=True, null=True)
